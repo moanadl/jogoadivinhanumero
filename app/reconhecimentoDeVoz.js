@@ -1,5 +1,6 @@
 const elementoChute = document.getElementById('chute');
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
+window.SpeechRecognitionEvent = window.SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
 const recognition = new SpeechRecognition();
 recognition.lang = 'pt-BR';
@@ -21,4 +22,4 @@ function exibeChuteNaTela (chute) {
     `
 }
 
-// recognition.addEventListener('end', () => recognition.start());
+recognition.addEventListener('end', () => recognition.start());
